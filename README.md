@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Deligo Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Deligo** adalah aplikasi berbasis web yang menyediakan platform untuk mengelola produk dan akun pengguna. Proyek ini masih dalam tahap pengembangan dengan fokus utama pada tampilan antarmuka pengguna (UI) dan beberapa fitur dasar yang akan diperluas di masa depan.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fitur yang Tersedia
 
-## Expanding the ESLint configuration
+### 1. **Halaman Home**
+   Halaman utama yang memberikan gambaran umum tentang platform Deligo. Pengguna dapat melihat berbagai produk yang tersedia dan menavigasi ke halaman lainnya seperti login atau daftar produk.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 2. **Halaman Produk**
+   Menampilkan daftar produk yang dapat dipilih oleh pengguna. Setiap produk dilengkapi dengan gambar, harga, dan deskripsi singkat untuk membantu pengguna memilih produk yang diinginkan.
 
-- Configure the top-level `parserOptions` property like this:
+### 3. **Halaman Detail Produk**
+   Halaman detail produk yang memberikan informasi lebih mendalam tentang produk yang dipilih. Di sini, pengguna dapat melihat spesifikasi, harga, dan opsi lainnya.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 4. **Halaman Login**
+   Fitur login untuk pengguna yang sudah terdaftar. Pengguna dapat memasukkan username dan password untuk mengakses akun mereka di platform Deligo.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 5. **Halaman Register**
+   Halaman pendaftaran akun baru bagi pengguna yang belum memiliki akun. Pengguna akan diminta untuk mengisi informasi seperti nama, email, username, password, dan informasi kontak lainnya.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 6. **Halaman Activate Akun**
+   Fitur untuk mengaktifkan akun setelah pendaftaran atau pemulihan password. Pengguna akan menerima instruksi melalui email untuk mengaktifkan akun mereka sebelum dapat mengakses fitur platform.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 7. **Halaman Forgot Password**
+   Fitur pemulihan akun untuk pengguna yang lupa password mereka. Pengguna dapat memasukkan email terdaftar untuk menerima instruksi pemulihan password.
+
+### 8. **Dashboard Manajemen Produk**
+   Halaman dashboard untuk administrator yang memungkinkan mereka mengelola produk di platform **DeliGo**. Administrator Merchant nantinya dapat menambah, mengedit, atau menghapus produk. Fitur ini sedang dalam pengembangan dan akan diperluas di masa mendatang.
+
+---
+
+## Teknologi yang Digunakan
+
+- **React**: Untuk membangun antarmuka pengguna (UI) dinamis dan interaktif.
+- **Tailwind CSS**: Untuk styling yang responsif dan fleksibel, memungkinkan desain yang konsisten dan modern.
+- **Framer Motion**: Untuk animasi dan transisi halus pada elemen-elemen UI.
+- **Vite**: Alat pengembangan yang cepat dan efisien untuk aplikasi React.
+
+---
+
+## Instalasi dan Pengaturan
+
+1. **Clone repositori ini ke komputer Anda**:
+   ```bash
+   git clone https://github.com/Hanifama/Deligo-FE.git
+
+2. **Instal dependensi menggunakan npm atau yarn**
+  ```bash
+  npm install
+
+
+3. **Jalankan aplikasi di server lokal**
+```bash
+  npm run dev
+
+Rencana Pengembangan Selanjutnya
+Fitur Pengelolaan Produk Lanjutan: Menambah, mengedit, dan menghapus produk dengan lebih banyak opsi dan kontrol.
+Fitur Pembayaran dan Pemesanan: Menyediakan sistem pembayaran untuk pengguna yang ingin membeli produk.
+Autentikasi dan Otorisasi Lebih Lanjut: Penambahan role-based access control (RBAC) untuk administrator dan pengguna biasa.
+Integrasi API: Mengambil data produk secara dinamis untuk memperkaya pengalaman pengguna.
