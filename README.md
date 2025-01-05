@@ -48,13 +48,12 @@
    git clone https://github.com/Hanifama/Deligo-FE.git
 
 2. **Instal dependensi menggunakan npm atau yarn**
-  ```bash
-  npm install
-
+   ```bash
+   npm install
 
 3. **Jalankan aplikasi di server lokal**
-  ```bash
-  npm run dev
+   ```bash
+   npm run dev
 
 ## Rencana Pengembangan Selanjutnya
 - Fitur Pengelolaan Produk Lanjutan: Menambah, mengedit, dan menghapus produk dengan lebih banyak opsi dan kontrol.
