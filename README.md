@@ -34,7 +34,7 @@
 
 ## Teknologi yang Digunakan
 
-- **React**: Untuk membangun antarmuka pengguna (UI) dinamis dan interaktif.
+- **React + Vite**: Untuk membangun antarmuka pengguna (UI) dinamis dan interaktif.
 - **Tailwind CSS**: Untuk styling yang responsif dan fleksibel, memungkinkan desain yang konsisten dan modern.
 - **Framer Motion**: Untuk animasi dan transisi halus pada elemen-elemen UI.
 - **Vite**: Alat pengembangan yang cepat dan efisien untuk aplikasi React.
@@ -53,11 +53,11 @@
 
 
 3. **Jalankan aplikasi di server lokal**
-```bash
+  ```bash
   npm run dev
 
-Rencana Pengembangan Selanjutnya
-Fitur Pengelolaan Produk Lanjutan: Menambah, mengedit, dan menghapus produk dengan lebih banyak opsi dan kontrol.
-Fitur Pembayaran dan Pemesanan: Menyediakan sistem pembayaran untuk pengguna yang ingin membeli produk.
-Autentikasi dan Otorisasi Lebih Lanjut: Penambahan role-based access control (RBAC) untuk administrator dan pengguna biasa.
-Integrasi API: Mengambil data produk secara dinamis untuk memperkaya pengalaman pengguna.
+## Rencana Pengembangan Selanjutnya
+- Fitur Pengelolaan Produk Lanjutan: Menambah, mengedit, dan menghapus produk dengan lebih banyak opsi dan kontrol.
+- Fitur Pembayaran dan Pemesanan: Menyediakan sistem pembayaran untuk pengguna yang ingin membeli produk.
+- Autentikasi dan Otorisasi Lebih Lanjut: Penambahan role-based access control (RBAC) untuk administrator dan pengguna biasa.
+- Integrasi API: Mengambil data produk secara dinamis untuk memperkaya pengalaman pengguna.
