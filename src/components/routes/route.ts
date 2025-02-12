@@ -10,6 +10,7 @@ import CategoryManagement from '../../pages/CategoryManagement';
 import UserManagement from '../../pages/UserManagement';
 import ProductDetailPage from '../../pages/DetailProduct';
 import NotFound from '../_shared/Notfound';
+import TabelMahasiswa from '../../pages/Dashboardku';
 
 export interface Route {
     path: string;
@@ -56,6 +57,10 @@ const routes: Route[] = [
     {
         path: '/users-management',
         component: UserManagement,
+    },
+    {
+        path: '/kuliah',
+        component: TabelMahasiswa,
     },
     
     {
