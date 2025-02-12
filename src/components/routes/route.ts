@@ -3,7 +3,7 @@ import Register from '../../pages/RegisterPage';
 import Activate from '../../pages/ActivatePage';
 import Login from '../../pages/LoginPage';
 import ForgotPassword from '../../pages/ForgotPassword';
-import HomePage from '../../pages/HomePage';
+// import HomePage from '../../pages/HomePage';
 import Dashboard from '../../pages/DasboardPage';
 import ProductManagement from '../../pages/ProductManagement';
 import CategoryManagement from '../../pages/CategoryManagement';
@@ -20,7 +20,7 @@ export interface Route {
 const routes: Route[] = [
     {
         path: '/',
-        component: HomePage,
+        component: TabelMahasiswa,
     },
     {
         path: '/product-detail/:id',
