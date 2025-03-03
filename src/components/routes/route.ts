@@ -10,7 +10,7 @@ import CategoryManagement from '../../pages/CategoryManagement';
 import UserManagement from '../../pages/UserManagement';
 import ProductDetailPage from '../../pages/DetailProduct';
 import NotFound from '../_shared/Notfound';
-import LatihanMobile from '../../pages/LatihanMobile';
+// import LatihanMobile from '../../pages/LatihanMobile';
 import SkripsiOnline from '../../pages/stikyHeadingPertemuan5';
 import ContactForm from '../../pages/ContactUsPertemuan5';
 
@@ -22,7 +22,7 @@ export interface Route {
 const routes: Route[] = [
     {
         path: '/',
-        component: LatihanMobile,
+        component: SkripsiOnline,
     },
     {
         path: '/pertemuan5-stikymenu',
