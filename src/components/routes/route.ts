@@ -11,6 +11,8 @@ import UserManagement from '../../pages/UserManagement';
 import ProductDetailPage from '../../pages/DetailProduct';
 import NotFound from '../_shared/Notfound';
 import LatihanMobile from '../../pages/LatihanMobile';
+import SkripsiOnline from '../../pages/stikyHeadingPertemuan5';
+import ContactForm from '../../pages/ContactUsPertemuan5';
 
 export interface Route {
     path: string;
@@ -21,6 +23,14 @@ const routes: Route[] = [
     {
         path: '/',
         component: LatihanMobile,
+    },
+    {
+        path: '/pertemuan5-stikymenu',
+        component: SkripsiOnline,
+    },
+    {
+        path: '/pertemuan5-animasicontact',
+        component: ContactForm,
     },
     {
         path: '/product-detail/:id',
