@@ -6,6 +6,11 @@ import photoku from './assets/img/photo.jpg';
 import experience1Img from './assets/img/experience.jpg';
 import experience2Img from './assets/img/experience2.jpg';
 
+type ThemeToggleProps = {
+  toggleTheme: () => void;
+  isDark: boolean;
+};
+
 const portfolioItems = [
   {
     id: '1',
@@ -24,8 +29,8 @@ const portfolioItems = [
 ];
 
 const Navbar = () => (
-  <nav className="bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between">
-    <h1 className="font-bold text-lg text-black dark:text-white">MyCV</h1>
+  <nav className="bg-white dark:bg-gray-800 dark:shadow-gray-700/50 shadow-md p-4 flex justify-between transition-colors duration-500">
+    <h1 className="font-bold text-lg text-black dark:text-white">Nuthafsari Ansarani</h1>
     <div className="space-x-4">
       <Link to="/" className="hover:text-blue-600 text-black dark:text-white">Home</Link>
       <Link to="/portfolio" className="hover:text-blue-600 text-black dark:text-white">Portfolio</Link>
@@ -34,7 +39,7 @@ const Navbar = () => (
 );
 
 const Home = () => (
-  <div className="flex flex-col items-center text-center mt-10 px-4">
+  <div className="flex flex-col items-center text-center mt-10 px-4 bg-white dark:bg-gray-800 rounded-lg shadow p-6 max-w-xl mx-auto transition-colors duration-500">
     <img src={photoku} alt="profile" className="w-40 h-40 rounded-full shadow mb-4 object-cover" />
     <h2 className="text-3xl font-bold text-black dark:text-white">Nuthafsari Ansarani</h2>
     <p className="text-gray-600 dark:text-gray-300">Chef | Culinary Creator | Indonesian Food Specialist</p>
@@ -46,13 +51,13 @@ const Home = () => (
 );
 
 const Portfolio = () => (
-  <div className="p-6">
+  <div className="p-6 max-w-3xl mx-auto">
     <h2 className="text-2xl font-bold mb-6 text-center text-black dark:text-white">PORTFOLIOKU</h2>
     <div className="space-y-6 relative border-l-2 border-blue-500 ml-4">
       {portfolioItems.map((item, index) => (
         <motion.div
           key={item.id}
-          className="pl-4 relative"
+          className="pl-4 relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow transition-colors duration-500"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: index * 0.3 }}
@@ -73,7 +78,7 @@ const PortfolioDetail = () => {
   if (!item) return <div className="p-6 text-red-600">Portfolio tidak ditemukan</div>;
 
   return (
-    <div className="p-6 max-w-3xl mx-auto">
+    <div className="p-6 max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow transition-colors duration-500">
       <h2 className="text-2xl font-bold mb-2 text-black dark:text-white">{item.title}</h2>
       {item.image && (
         <img src={item.image} alt={item.title} className="rounded-lg shadow mb-4 max-h-80 object-cover w-full" />
@@ -85,17 +90,16 @@ const PortfolioDetail = () => {
 };
 
 const NotFound = () => (
-  <div className="p-6 text-center">
+  <div className="p-6 text-center bg-white dark:bg-gray-800 rounded-lg shadow max-w-md mx-auto mt-10 transition-colors duration-500">
     <h2 className="text-xl font-bold text-red-600">404 - Halaman Tidak Ditemukan</h2>
     <Link to="/" className="text-blue-500 hover:underline">Kembali ke Home</Link>
   </div>
 );
 
-// Theme toggle button component
-const ThemeToggle = ({ toggleTheme, isDark }: { toggleTheme: () => void; isDark: boolean }) => (
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ toggleTheme, isDark }) => (
   <button
     onClick={toggleTheme}
-    className="fixed bottom-4 left-4 bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600"
+    className="fixed bottom-4 left-4 bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600 transition"
   >
     {isDark ? '☀️ Light' : '🌙 Dark'}
   </button>
@@ -110,7 +114,7 @@ const App = () => {
   };
 
   return (
-    <div className={`${isDark ? 'dark bg-gray-900' : 'bg-white'} min-h-screen transition-colors duration-300`}>
+    <div className={`${isDark ? 'dark bg-gray-900' : 'bg-white'} min-h-screen transition-colors duration-500`}>
       <Router>
         <Navbar />
         <Routes>
